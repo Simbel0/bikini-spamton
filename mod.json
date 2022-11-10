@@ -1,0 +1,17 @@
+{
+    "id": "spamton_bikini",
+    "name": "Spamton In A Bikini",
+    "subtitle": "COME LOOK AT SPAMTON'S ASS!",
+
+    "version": "v0.0.0",
+    "engineVer": "v0.8.0-dev",
+
+    "chapter": 2,
+
+    "map": "room1",
+    "party": ["kris"],
+    "inventory": {
+        "items": ["darkburger", "darkburger", "ultimate_candy"],
+        "key_items": ["cell_phone"]
+    }
+}
