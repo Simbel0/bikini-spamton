@@ -12,9 +12,10 @@
     "map": "spamton_alley",
     "party": ["kris"],
     "inventory": {
-        "items": ["darkburger", "darkburger", "noelle_tea"],
+        "items": ["cd_bagel", "cd_bagel", "noelle_tea"],
         "key_items": ["cell_phone", "shadowcrystal"]
     },
+    
     "equipment": {
         "kris": {
             "weapon": "mechasaber",
