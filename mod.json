@@ -1,17 +1,24 @@
 {
     "id": "spamton_bikini",
     "name": "Spamton In A Bikini",
-    "subtitle": "COME LOOK AT SPAMTON'S ASS!",
+    "subtitle": "COME LOOK AT SPAMTON'S ASS! (GONE WRONG!!!) (+18!!!!)",
 
-    "version": "v0.0.0",
-    "engineVer": "v0.8.0-dev",
+    "version": "v1.0.2",
+    "engineVer": "v0.7.1",
 
+    "useSaves": false,
     "chapter": 2,
 
-    "map": "room1",
+    "map": "spamton_alley",
     "party": ["kris"],
     "inventory": {
-        "items": ["darkburger", "darkburger", "ultimate_candy"],
-        "key_items": ["cell_phone"]
+        "items": ["darkburger", "darkburger", "noelle_tea"],
+        "key_items": ["cell_phone", "shadowcrystal"]
+    },
+    "equipment": {
+        "kris": {
+            "weapon": "mechasaber",
+            "armor": ["pink_ribbon", "silver_watch"]
+        }
     }
 }

@@ -3,9 +3,9 @@
  <image source="../../../assets/sprites/tilesets/bg_dw_city_alley_animated.png" width="120" height="440"/>
  <tile id="0">
   <animation>
-   <frame tileid="6" duration="140"/>
-   <frame tileid="7" duration="140"/>
-   <frame tileid="8" duration="140"/>
+   <frame tileid="6" duration="1000"/>
+   <frame tileid="7" duration="1000"/>
+   <frame tileid="8" duration="1000"/>
   </animation>
  </tile>
 </tileset>
