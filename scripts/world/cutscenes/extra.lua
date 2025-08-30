@@ -1,7 +1,5 @@
 return {
 	gamePadWarning=function(cutscene)
-		cutscene:text("* (INFO: The gamepad has not been made compatible for the f1 stuff.[wait:3] Sorry :p)")
-		cutscene:text("* (- Simbel without a gamepad)")
 	end,
 	left_exit = function(cutscene, script, chara)
 		cutscene:text("* (For some unexplainable reason,[wait:2] you feel like you shouldn't go back now.)")
@@ -51,6 +49,8 @@ return {
 		cutscene:wait(7)
 		dialogue:setText("[voice:none]* The F1 Spamton Angel was remade on Kristal by spacerace")
 		cutscene:wait(3)
+		dialogue:setText("[voice:none]* F1 on controller fixed by AcousticJamm")
+		cutscene:wait(3)
 		dialogue:setText("[voice:none]* This masterpiece of a shitpost was brought to you by:")
 		cutscene:wait(2.5)
 		dialogue:setText("[voice:none]* Octobox[wait:3]\n\n* Held the hunger game sim that led to Spamton putting on a bikini")
@@ -61,7 +61,7 @@ return {
 		cutscene:wait(3.4)
 		dialogue:setText("[voice:none]* Simbel[wait:3]\n\n* Accepted to do the mod for some reason")
 		cutscene:wait(3)
-		dialogue:setText("[voice:none]* -- Honorable Mentions --[wait:3]\n* BrandonK7200 - Being at the event[wait:3]\n* vitellary - Being the sane person refusing to add Bikini Spamton as an emote")
+		dialogue:setText("[voice:none]* -- Honorable Mentions --[wait:3]\n* BrendaK7200 - Being at the event[wait:3]\n* vitellary - Being the sane person refusing to add Bikini Spamton as an emote")
 		cutscene:wait(6)
 		dialogue:setText("")
 		cutscene:wait(1)

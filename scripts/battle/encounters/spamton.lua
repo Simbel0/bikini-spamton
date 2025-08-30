@@ -29,7 +29,7 @@ end
 
 function spamton:update()
     --print(Input.pressed("f1"))
-    if Input.pressed("f1") and not (Game.battle.state:sub(1,9)=="DEFENDING" or Game.battle.state=="VICTORY") then
+    if (Input.pressed("f1") or Input.pressed("gamepad:rightstick")) and not (Game.battle.state:sub(1,9)=="DEFENDING" or Game.battle.state=="VICTORY") then
         print("KHZKAHKHK")
         if Game:getFlag("f1_angel", true) then
             print("hello")
