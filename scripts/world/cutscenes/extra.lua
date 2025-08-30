@@ -1,6 +1,4 @@
 return {
-	gamePadWarning=function(cutscene)
-	end,
 	left_exit = function(cutscene, script, chara)
 		cutscene:text("* (For some unexplainable reason,[wait:2] you feel like you shouldn't go back now.)")
 		cutscene:wait(cutscene:walkTo(chara, chara.x, chara.y+50, 0.5))

@@ -4,10 +4,6 @@ end
 
 function Mod:postInit(newfile)
     Game.money = love.math.random(15, 1997)
-    if newfile and Input.usingGamepad() then
-        -- Game.stage:addChild(Warning()) --Wanted to be sophisticated but uh... I crashed LÖVE trying so
-        Game.world:startCutscene("extra.gamePadWarning")
-    end
 end
 
 function Mod:load()
