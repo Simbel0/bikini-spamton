@@ -36,7 +36,7 @@ function ab_heart:onStart()
             print(x, y)
 
             local minispam = Sprite("npcs/spamtong/walk", x, y)
-            minispam.will_jump = math.random()<0.5
+            minispam.will_jump = love.math.random()<0.5
             minispam.flip_x = true
             minispam.layer = BATTLE_LAYERS["below_bullets"]
             table.insert(self.sprites, minispam)
@@ -49,7 +49,7 @@ function ab_heart:onStart()
                 minispam:setSprite("npcs/spamtong/arms_up")
                 self.timer:after(0.2, function()
                     local x, y = minispam.x+minispam.width/2, minispam.y-15
-                    local bullet = self:spawnBullet("heart", x, y, math.random()<0.5)
+                    local bullet = self:spawnBullet("heart", x, y, love.math.random()<0.5)
                     if minispam.will_jump then
                         bullet.physics.direction = math.rad(270)
                         bullet.physics.speed = 4

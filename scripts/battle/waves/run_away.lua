@@ -3,7 +3,7 @@ local run_away, super = Class(Wave)
 function run_away:init()
     super.init(self)
     self.time = -1
-    self.path_selections = math.random(5,10)
+    self.path_selections = love.math.random(5,7)
 end
 
 function run_away:onStart()

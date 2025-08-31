@@ -2,8 +2,8 @@ local balls, super = Class(Wave)
 
 function balls:init()
     super.init(self)
-    self.hard = math.random()<0.5
-    self.time = 15
+    self.hard = love.math.random()<0.5
+    self.time = 10
     self:setArenaOffset(-60, 0)
 end
 
