@@ -77,8 +77,7 @@ function preview:draw()
     if self.fade <= 0 then return end
 
     love.graphics.setColor(1, 1, 1, self.fade)
-    local vid_w, vid_h = self.menu.spamton_ass:getWidth(), self.menu.spamton_ass:getHeight()
-    local vid_scale = math.min(SCREEN_WIDTH/vid_w, SCREEN_HEIGHT/vid_h)
+    local vid_w, vid_h = self.menu.spamton_ass:getDimensions()
     love.graphics.draw(self.menu.spamton_ass, 0, 0, 0, SCREEN_WIDTH/vid_w, SCREEN_HEIGHT/vid_h)
 end
 
