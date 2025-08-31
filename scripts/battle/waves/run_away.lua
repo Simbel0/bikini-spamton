@@ -47,7 +47,7 @@ function run_away:onStart()
                     self.timer:after(0.5, function()
                         self.timer:everyInstant(1/30, function()
                             local bullet = self:spawnBullet("heart", path[1]+Utils.random(6, 6*4), path[2]+Utils.random(-30, 30))
-                            bullet.tp = bullet.tp /2
+                            bullet.tp = (bullet.getGrazeTension and bullet:getGrazeTension() or bullet.tp)/2
                             bullet.physics.direction = Utils.angle(bullet.x, bullet.y, path[3] or path[1], path[4])
                             bullet.physics.speed = Utils.random(19, 21)
                         end, 20)
