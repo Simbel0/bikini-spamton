@@ -2,7 +2,7 @@ local SmallBullet, super = Class(Bullet)
 
 function SmallBullet:init(x, y, dir, speed)
     -- Last argument = sprite path
-    super.init(self, x, y, "bullets/ball"..math.random(1,3))
+    super.init(self, x, y, "bullets/ball"..love.math.random(1,3))
 
     -- Move the bullet in dir radians (0 = right, pi = left, clockwise rotation)
     self.physics.direction = dir
