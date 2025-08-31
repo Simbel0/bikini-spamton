@@ -4,7 +4,7 @@ function SpamAngel:init(x, y, chara)
 	self.xstart = x --emulate xstart and ystart vars in gamemaker
 	self.ystart = y --location of target
 
-	super:init(self, "", x+200, y-150) --shifts over to beginning pos
+	super.init(self, "", x+200, y-150) --shifts over to beginning pos
 
 	self.chara = chara --party member for heals
 
@@ -94,7 +94,7 @@ function SpamAngel:update(dt)
 	end
 
 
-	super:update(self, dt)
+	super.update(self, dt)
 
 end
 

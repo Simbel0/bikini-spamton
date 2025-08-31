@@ -1,7 +1,7 @@
 local ab_heart, super = Class(Wave)
 
 function ab_heart:init()
-    super:init(self)
+    super.init(self)
     self.time = 15
 end
 
@@ -84,7 +84,7 @@ function ab_heart:update()
         self.big_spamton["top"].y = 0+math.sin(Kristal.getTime()*13)*8
     end
 
-    super:update(self)
+    super.update(self)
 end
 
 function ab_heart:onEnd()

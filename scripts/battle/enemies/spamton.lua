@@ -1,7 +1,7 @@
 local Spamton, super = Class(EnemyBattler)
 
 function Spamton:init()
-    super:init(self)
+    super.init(self)
 
     -- Enemy name
     self.name = "Spamton"
@@ -105,7 +105,7 @@ function Spamton:update()
             self.sprite.shake_y = 0
         end
     end
-    super:update(self)
+    super.update(self)
 end
 
 function Spamton:onAct(battler, name)
@@ -342,7 +342,7 @@ function Spamton:onAct(battler, name)
 
     -- If the act is none of the above, run the base onAct function
     -- (this handles the Check act)
-    return super:onAct(self, battler, name)
+    return super.onAct(self, battler, name)
 end
 
 function Spamton:getEncounterText()
@@ -352,11 +352,11 @@ function Spamton:getEncounterText()
     elseif self.turns == 2 then
         return "* There's nothing wrong.\nThere's NOTHING WRONG.\nTHERE'S NOTHING WRONG."
     end
-    return super:getEncounterText(self)
+    return super.getEncounterText(self)
 end
 
 function Spamton:getEnemyDialogue()
-    dialogue = super:getEnemyDialogue(self)
+    dialogue = super.getEnemyDialogue(self)
     if dialogue == "FEEL MY [Big Red][$!@$]" then
         self.wave_override = "run_away"
     elseif dialogue == "PLEASE SEND ME LOTS OF [Die]" then

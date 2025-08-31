@@ -1,7 +1,7 @@
 local balls, super = Class(Wave)
 
 function balls:init()
-    super:init(self)
+    super.init(self)
     self.hard = math.random()<0.5
     self.time = 15
     self:setArenaOffset(-60, 0)
@@ -57,7 +57,7 @@ function balls:update()
         self.big_spamton["bottom"].y = 55+math.sin(Kristal.getTime()*5)*40
     end
 
-    super:update(self)
+    super.update(self)
 end
 
 function balls:onEnd()

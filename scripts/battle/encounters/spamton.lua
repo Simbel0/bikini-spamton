@@ -1,7 +1,7 @@
 local spamton, super = Class(Encounter)
 
 function spamton:init()
-    super:init(self)
+    super.init(self)
 
     -- Text displayed at the bottom of the screen at the start of the encounter
     self.text = "* That doesn't feel right at all.."
