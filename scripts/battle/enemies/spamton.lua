@@ -67,35 +67,9 @@ function Spamton:init()
     self.deal = 1
     self.seen_deal = {false}
     self.shake = false
-
-    self.shader = ShaderFX(love.graphics.newShader([[
-        extern number bg_sine;
-        extern number bg_mag;
-        extern number wave_height;
-        extern number sine_mul;
-        extern vec2 texsize;
-        vec4 effect( vec4 color, Image texture, vec2 texture_coords, vec2 screen_coords )
-        {
-            number i = texture_coords.y * texsize.y;
-            number bg_minus = ((bg_mag * (i / wave_height)) * 1.3);
-            number wave_mag = max(0.0, bg_mag - bg_minus);
-            vec2 coords = vec2(max(0.0, min(1.0, texture_coords.x + (sine_mul * sin((i / 8.0) + (bg_sine / 30.0)) * wave_mag) / texsize.x)), max(0.0, min(1.0, texture_coords.y + 0.0)));
-            return Texel(texture, coords) * color;
-        }
-    ]]), {
-        bg_sine = 1,
-        bg_mag = 0.3,
-        wave_height = 100,
-        sine_mul = 1,
-        texsize = {self.sprite.width, self.sprite.height}
-    })
-    self.shader_timer = 1
-    --self:addFX(self.shader)
 end
 
 function Spamton:update()
-    self.shader_timer = self.shader_timer + 20*DTMULT
-    self.shader.vars["bg_sine"] = self.shader_timer
     if self.shake then
         self.sprite.shake_x = 1
         self.sprite.shake_y = 1
@@ -113,7 +87,7 @@ function Spamton:onAct(battler, name)
         if name == "HealDeal" then
             battler:heal(60)
         end
-        local c = "* seegs"
+        local c = "* seggs"
         local deal = self.deal
 
         if deal == 1 then
