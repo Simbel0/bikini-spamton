@@ -38,7 +38,7 @@ function preview:init(mod, button, menu)
     self.menu.spamton_ass = love.graphics.newVideo(base_path.."/spamton_ASS.ogv")
     self.menu.spamton_ass:setFilter("linear", "linear")
     self.menu.spamton_ass:play()
-    self.menu.spamton_ass:getSource():setVolume(self.fade)
+    self.menu.spamton_ass:getSource():setVolume(self.fade or 0)
 end
 
 function preview:update()
