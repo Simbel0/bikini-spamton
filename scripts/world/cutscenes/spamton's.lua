@@ -44,14 +44,17 @@ return function(cutscene, script, chara)
         cutscene:wait(0.75)
         spamton.sprite.flip_x = false
         cutscene:wait(0.1)
-        spamton.alert_icon = Sprite("effects/alert", spamton.sprite.width/2)
-        spamton.alert_icon:setOrigin(0.5, 1)
-        spamton.alert_icon.layer = 100
-        spamton:addChild(spamton.alert_icon)
-        Game.world.timer:after(0.8, function()
-            spamton.alert_icon:remove()
-        end)
-
+        if cutscene.alert then -- Modern Kristal
+            cutscene:alert(spamton, nil, {play_sound=false})
+        else -- Older Kristal
+            spamton.alert_icon = Sprite("effects/alert", spamton.sprite.width/2)
+            spamton.alert_icon:setOrigin(0.5, 1)
+            spamton.alert_icon.layer = 100
+            spamton:addChild(spamton.alert_icon)
+            Game.world.timer:after(0.8, function()
+                spamton.alert_icon:remove()
+            end)
+        end
         cutscene:wait(1)
 
         cutscene:text("* WELL! IF I AIn\"T [%!$@] RIGHT NOW IT IS A..", nil, spamton)
@@ -249,13 +252,17 @@ return function(cutscene, script, chara)
         cutscene:wait(1)
         spamton.sprite.flip_x = false
         cutscene:wait(0.1)
-        spamton.alert_icon = Sprite("effects/alert", spamton.sprite.width/2)
-        spamton.alert_icon:setOrigin(0.5, 1)
-        spamton.alert_icon.layer = 100
-        spamton:addChild(spamton.alert_icon)
-        Game.world.timer:after(0.8, function()
-            spamton.alert_icon:remove()
-        end)
+        if cutscene.alert then -- Modern Kristal
+            cutscene:alert(spamton, nil, {play_sound=false})
+        else -- Older Kristal
+            spamton.alert_icon = Sprite("effects/alert", spamton.sprite.width/2)
+            spamton.alert_icon:setOrigin(0.5, 1)
+            spamton.alert_icon.layer = 100
+            spamton:addChild(spamton.alert_icon)
+            Game.world.timer:after(0.8, function()
+                spamton.alert_icon:remove()
+            end)
+        end
         cutscene:wait(0.8)
         Game.world.timer:after(0.4, function()
             cutscene:walkTo(kris, 390, 280, 0.25, "right", true)
