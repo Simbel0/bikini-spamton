@@ -10,7 +10,6 @@ function ab_heart:onStart()
     spamton:setAnimation("grow")
     self.timer:script(function(wait)
         while spamton.sprite.playing do
-            print(spamton.sprite.playing)
             wait(0.1)
         end
         wait(0.5)
@@ -33,7 +32,6 @@ function ab_heart:onStart()
         self.timer:everyInstant(0.8, function()
             -- Our X position is offscreen, to the right
             local x, y = -20, Utils.random(Game.battle.arena.top-20, Game.battle.arena.bottom-20)
-            print(x, y)
 
             local minispam = Sprite("npcs/spamtong/walk", x, y)
             minispam.will_jump = love.math.random()<0.5

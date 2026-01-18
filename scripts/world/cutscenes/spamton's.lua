@@ -2,7 +2,6 @@ return function(cutscene, script, chara)
     local spamton = cutscene:spawnNPC("spamtong", 640, 233)
     local kris = cutscene:getCharacter("kris")
     local pitch_timer
-    print(script)
     if not Game:getFlag("quick", false) then
         local dumpster = cutscene:getEvent("dumpster")
 
@@ -74,7 +73,6 @@ return function(cutscene, script, chara)
         end)
 
         cutscene:during(function()
-            print(spamton.sprite.shake_x, spamton.sprite.shake_y, not (spamton.sprite.shake_x~=0 or spamton.sprite.shake_y~=0))
             if not (spamton.sprite.shake_x~=0 or spamton.sprite.shake_y~=0) then
                 if spamton_slide then
                     spamton.x = spamton_inten_x+math.cos(Kristal.getTime()*spamton_slide_values[1])*spamton_slide_values[2]
@@ -278,7 +276,6 @@ return function(cutscene, script, chara)
         end)
 
         cutscene:during(function()
-            print(spamton.sprite.shake_x, spamton.sprite.shake_y, not (spamton.sprite.shake_x~=0 or spamton.sprite.shake_y~=0))
             if not (spamton.sprite.shake_x~=0 or spamton.sprite.shake_y~=0) then
                 if spamton_slide then
                     spamton.x = spamton_inten_x+math.cos(Kristal.getTime()*spamton_slide_values[1])*spamton_slide_values[2]

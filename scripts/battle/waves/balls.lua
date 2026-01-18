@@ -12,7 +12,6 @@ function balls:onStart()
     spamton:setAnimation("grow")
     self.timer:script(function(wait)
         while spamton.sprite.playing do
-            print(spamton.sprite.playing)
             wait(0.1)
         end
         wait(0.5)
@@ -33,7 +32,6 @@ function balls:onStart()
         self.timer:every(1/2, function()
             -- Our X position is offscreen, to the right
             local x, y = self.big_spamton["middle"]:getScreenPos()
-            print(x, y, x+self.big_spamton["middle"].width/2, y+self.big_spamton["middle"].height/2)
 
             -- Spawn smallbullet going left with speed 8 (see scripts/battle/bullets/smallbullet.lua)
             local bullet = self:spawnBullet("ball", x+self.big_spamton["middle"].width, y+self.big_spamton["middle"].height+20, math.rad(180), 8)
